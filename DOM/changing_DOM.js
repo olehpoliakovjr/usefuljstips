@@ -13,7 +13,7 @@ let firstDiv = document.querySelector(".mainDIV")
 let divElement = document.createElement("div"); // div
 let divText = document.createTextNode("Hello world"); // text
 
-// отличие примитивной строки и нодового узла - нодовый узел это объект
+// The difference between a primitive string and a node - a node is an object
 
 divElement.append(divText) // add text into div
 document.body.append(divElement) // add text into div
