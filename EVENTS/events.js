@@ -39,3 +39,14 @@ function move (e) {
 block.addEventListener("keydown", function (event){
     block.textContent = `key: ${event.key}`
 })
+
+let outputDiv = document.querySelector(".output")
+document.addEventListener("keydown",function (e){
+     let massage = `keydown (code ${e.code}),key (code ${e.key})`
+    outputDiv.innerHTML = massage;
+     //code - код клавиши, key - символ клавиши
+})
+document.addEventListener("keyup",function (e){
+    let massage = `keyup (code ${e.code}),key (code ${e.key})`
+    outputDiv.innerHTML = massage;
+})

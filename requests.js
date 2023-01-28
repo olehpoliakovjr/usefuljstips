@@ -10,5 +10,4 @@ document.addEventListener("DOMContentLoaded", function (){
             document.querySelector(".block").innerHTML = `1 btc is equal to ${rate.toFixed(0)} EUR`;
         });
 
-
 })
