@@ -50,3 +50,44 @@ document.addEventListener("keyup",function (e){
     let massage = `keyup (code ${e.code}),key (code ${e.key})`
     outputDiv.innerHTML = massage;
 })
+
+//-------------------------------------------//
+
+let moveBlock = document.querySelector(".moveBlock");
+let distance = 10;
+document.addEventListener("keydown", function (e){
+    if (e.code == "ArrowLeft"){
+        moveLeft(moveBlock,distance)
+    } else if (e.code == "ArrowRight"){
+        moveRight(moveBlock,distance)
+    } else if (e.code == "ArrowUp"){
+        moveUp(moveBlock,distance)
+    } else if (e.code == "ArrowDown"){
+        moveDown(moveBlock,distance)
+    }
+})
+
+function moveLeft (block,distance){
+    let left = getComputedStyle(block).left;
+    console.log(parseInt(left))
+    block.style.left = parseInt(left) - (distance * 2) + "px"
+}
+function moveRight (block,distance){
+    let left = getComputedStyle(block).left;
+    console.log(parseInt(left))
+    block.style.left = parseInt(left) + (distance * 2) + "px"
+}
+
+function moveUp (block,distance){
+    let top = getComputedStyle(block).top;
+    console.log(parseInt(top))
+    block.style.top = parseInt(top) - distance + "px"
+}
+
+function moveDown (block,distance){
+    let top = getComputedStyle(block).top;
+    console.log(parseInt(top))
+    block.style.top = parseInt(top) + distance + "px"
+}
+
+//-------------------------------------------//
