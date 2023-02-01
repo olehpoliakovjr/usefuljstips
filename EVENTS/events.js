@@ -91,3 +91,12 @@ function moveDown (block,distance){
 }
 
 //-------------------------------------------//
+
+// Фазы события
+// 1 capturing phase
+// 2 at target phase
+// 3 bubbling phase
+
+// event.stopPropagation() - запретить событию продолжать двигаться по элементам
+// event.preventDefault() - отмена события по умолчанию
+
