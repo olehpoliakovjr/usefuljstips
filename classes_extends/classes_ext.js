@@ -76,7 +76,7 @@ let objs2 = new someDerivedClass()
 
 console.log(objs1.exemp())
 console.log(objs2.exemp())
-console.log(`--------------------------`)
+//--------------------------------------------//
 // static - ключевое слово для определения статических полей и методов
 // статический член класса существует в одном экземпляре для всего приложения
 // статическое свойство или метод создаются в конструкторе класса
@@ -118,3 +118,29 @@ m3.method1()
 m4.method1()
 
 MyMethod.method2()
+//--------------------------------------------//
+class User{
+    constructor(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+    log(){
+        console.log(this.name + " " + this.age)
+    }
+    static compare (user1,user2){
+        return user1.age - user2.age
+    }
+}
+
+let arrayOfPeople = [
+    new User("Oleg",20),
+    new User("Pasha",14),
+    new User("Andrii",45),
+    new User("Dasha", 32),
+    new User("Mark",25)
+]
+
+arrayOfPeople.sort(User.compare)
+arrayOfPeople.sort(User.compare)
+arrayOfPeople.forEach(user => user.log())
+
