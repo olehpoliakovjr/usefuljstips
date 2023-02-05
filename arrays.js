@@ -37,6 +37,7 @@ console.log(`max number in this array is ` + max)
 
 
 //METHODS
+firstArray.map()   // создает новый массив, заполненный результатами вызова предоставленной функции для каждого элемента в вызывающем массиве.
 firstArray.pop()  // this method delete the LAST element in the array and return him
 firstArray.shift() // // this method delete the FIRST element in the array and return him
 firstArray.push("something...")  // this method add the element in the END of array
