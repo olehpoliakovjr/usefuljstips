@@ -56,6 +56,8 @@ Array.from() // метод создаёт новый экземпляр Array и
 firstArray.filter() // Метод filter() создаёт новый массив со всеми элементами,
                     // прошедшими проверку, задаваемую в передаваемой функции.
 firstArray.push() // this method add an element into array
+firstArray.map() // method creates a new array populated with the results of calling a provided function on every element in the calling array.
+// const map1 = array1.map(x => x * 2)
 
 
 

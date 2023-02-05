@@ -144,3 +144,6 @@ arrayOfPeople.sort(User.compare)
 arrayOfPeople.sort(User.compare)
 arrayOfPeople.forEach(user => user.log())
 
+
+
+
