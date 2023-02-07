@@ -5,21 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            font-size: 18px;
+        }
+        .error{
+            color: red;
+            display: none;
+        }
+        input:valid{
+            border: 2px solid seagreen;
+        }
+        input:invalid{
+            border: 2px solid red;
+        }
+    </style>
 </head>
 <body>
+<!--1 form-->
+<br>
+--------------------------------------------------------
     <form name="loginForm" method="POST">
         <div class="form-group">
             <label>Login</label>
-            <input name="inputLogin" type="text">
+            <input name="loginInput" type="text">
         </div>
         <div class="form-group">
             <label>Password</label>
-            <input type="password">
+            <input type="password" name="passwordInput" autocomplete="on">
         </div>
         <div class="form-group">
             <input type="submit" value="Login">
         </div>
     </form>
+    <a href="#" class="validateForm">Check form values</a>
+<!--2 form-->
+<br>
+--------------------------------------------------------
+    <form name="dateForm">
+        <input type="date" name="input1">
+        <input type="time" name="input2">
+    </form>
+    <button class="checkValues">Check values</button>
+    <p id="time"></p>
+<!--3 form-->
+<br>
+--------------------------------------------------------
+    <form name="currency">
+        choose your currency:<br>
+        UAH <input type="radio" name="currency" value="UAH" checked><br>
+        USD <input type="radio" name="currency" value="USD" checked><br>
+        PLN <input type="radio" name="currency" value="PLN" checked><br>
+        EUR <input type="radio" name="currency" value="EUR" checked><br>
+        I agree with terms <input type="checkbox" name="termsAccept">
+    </form>
+    <button id="checkButton">Check values</button>
+
+<!--4form-->
+<br>
+--------------------------------------------------------
+    <form name="validation1">
+        <div>
+            <label>Search</label>
+            <input name="search" type="text">
+        </div>
+        <div>
+            <input value="Search" type="submit">
+        </div>
+    </form>
+<br>
+--------------------------------------------------------
+<!--5form-->
+<form name="validation2">
+    <div>
+        <label>Search</label>
+        <input name="searchh" type="text">
+    </div>
+    <div>
+        <input value="Search" type="submit">
+    </div>
+</form>
+<br>
+--------------------------------------------------------
+<!--form6-->
+<form name="validation3">
+    <div>
+        <label>Search</label>
+        <input name="search" type="text">
+        <p class="error" name="error">this field is required</p>
+    </div>
+    <div>
+        <input value="Search" type="submit">
+    </div>
+</form>
+<br>
+--------------------------------------------------------
+<form name="fullForm">
+    <div class="form-group">
+        <label>First name</label>
+        <input name="firstName" type="text" required>
+    </div>
+    <div class="form-group">
+        <label>Last name</label>
+        <input name="lastName" type="text" required>
+    </div>
+    <div class="form-group">
+        <label>Email adress</label>
+        <input name="email" type="email" required>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input name="password" type="password" autocomplete="on" required minlength="6" maxlength="20">
+    </div>
+    <div class="form-group">
+        <label>Repeat password</label>
+        <input name="passwordConfirm" type="password" autocomplete="on" required minlength="6" maxlength="20">
+    </div>
+    <div class="form-group">
+        <input name="acceptTerms" type="checkbox" required>
+        <label>Accept terms and rules</label>
+    </div>
+    <div class="form-group">
+        <input type="Submit" value="Regestration">
+    </div>
+</form>
+<a href="#" class="checkLink">Check the valid</a>
     <script src="script.js"></script>
 </body>
 </html>
