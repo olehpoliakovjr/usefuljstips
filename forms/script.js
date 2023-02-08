@@ -102,8 +102,8 @@ fullForm.addEventListener("submit", function(){
 
 fullForm.passwordConfirm.addEventListener("input",function(){
     if(fullForm.passwordConfirm.value != fullForm.password.value){
-        fullForm.passwordConfirm.setCustomValidity(`passwod and password dont match`)
-        fullForm.password.setCustomValidity(`passwod and password dont match`)
+        fullForm.passwordConfirm.setCustomValidity(`passwod and confirm password dont match`)
+        fullForm.password.setCustomValidity(`passwod and confirm password dont match`)
     } else {
         fullForm.passwordConfirm.setCustomValidity(``)
         fullForm.password.setCustomValidity(``)
