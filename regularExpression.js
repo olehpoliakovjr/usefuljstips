@@ -53,3 +53,6 @@ console.log(str.match(/^\d/mg))
 
 // Больше о регулярных выражениях в JavaScript https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_Expressions
 
+function isPangram(string) {
+    /^[a-zA-Z0-9]*$/gi.test(string)
+}

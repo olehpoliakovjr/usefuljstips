@@ -37,31 +37,35 @@ console.log(`max number in this array is ` + max)
 
 
 //METHODS
-firstArray.map()   // создает новый массив, заполненный результатами вызова предоставленной функции для каждого элемента в вызывающем массиве.
-firstArray.pop()  // this method delete the LAST element in the array and return him
-firstArray.shift() // // this method delete the FIRST element in the array and return him
-firstArray.push("something...")  // this method add the element in the END of array
-firstArray.unshift("something.")// this method add the element in the START of array
-firstArray.splice(1, 1) // начиная с индекса 1 удалить 1 элемент
-firstArray.splice(1, 1, "Madrid","Berlin")
-// начиная с индекса 1 удалить 1 элемент и добавить "Madrid","Berlin" // ^
-firstArray.slice(start,end) // this method is returned a new array , from START to END without END
-firstArray.concat(array) // this method create a new array and copy data from other array
-firstArray.indexOf('value') // this method search the value into array, and will return the index of element,
-                            // if this method have not found the elem in array is returns -1
-firstArray.split(", ") // this method splits the array into pieces
-console.log(firstArray)
-Array.from() // метод создаёт новый экземпляр Array из массивоподобного или итерируемого объекта.
-// (Array.from('foo'));
-// Expected output: Array ["f", "o", "o"]
-firstArray.filter() // Метод filter() создаёт новый массив со всеми элементами,
-                    // прошедшими проверку, задаваемую в передаваемой функции.
-firstArray.push() // this method add an element into array
-firstArray.map() // method creates a new array populated with the results of calling a provided function on every element in the calling array.
+// firstArray.map()   // создает новый массив, заполненный результатами вызова предоставленной функции для каждого элемента в вызывающем массиве.
+// firstArray.pop()  // this method delete the LAST element in the array and return him
+// firstArray.shift() // // this method delete the FIRST element in the array and return him
+// firstArray.push("something...")  // this method add the element in the END of array
+// firstArray.unshift("something.")// this method add the element in the START of array
+// firstArray.splice(1, 1) // начиная с индекса 1 удалить 1 элемент
+// firstArray.splice(1, 1, "Madrid","Berlin")
+// // начиная с индекса 1 удалить 1 элемент и добавить "Madrid","Berlin" // ^
+// firstArray.slice(start,end) // this method is returned a new array , from START to END without END
+// firstArray.concat(array) // this method create a new array and copy data from other array
+// firstArray.indexOf('value') // this method search the value into array, and will return the index of element,
+//                             // if this method have not found the elem in array is returns -1
+// firstArray.split(", ") // this method splits the array into pieces
+// console.log(firstArray)
+// Array.from() // метод создаёт новый экземпляр Array из массивоподобного или итерируемого объекта.
+// // (Array.from('foo'));
+// // Expected output: Array ["f", "o", "o"]
+// firstArray.filter() // Метод filter() создаёт новый массив со всеми элементами,
+//                     // прошедшими проверку, задаваемую в передаваемой функции.
+// firstArray.push() // this method add an element into array
+// firstArray.map() // method creates a new array populated with the results of calling a provided function on every element in the calling array.
 // const map1 = array1.map(x => x * 2)
 
+const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard'];
 
-
+function sortStudentsByGroups(arr) {
+    
+}
+console.log(sortStudentsByGroups(students))
 
 
 

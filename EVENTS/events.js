@@ -1,6 +1,28 @@
 //EVENTS
 //mouseEvents
 
+// таргет - текущий елемент на котором быол вополненно событие
+
+let btn = document.querySelector("#mouseBtn")
+
+const deleteElement = (e) => {
+    console.log(e)
+    e.target.style.backgroundColor = "red"
+}
+
+btn.addEventListener("mouseenter",deleteElement);
+
+
+//если у нас есть несколько элментов на которые мы хотим навесить события
+
+let btns = document.querySelectorAll("#mouseBtnn")
+
+btns.forEach(item => {
+    item.addEventListener("click", (e) => {
+        e.target;
+    })
+})
+
 // еще есть offsetX/Y (координаты относительно элемента, а не всей страницы) >>
 //DOMContentLoaded - the browser was uploaded layout and was built the DOM, (document)
 // but external resources, images for example,can be not uploaded yet
@@ -97,6 +119,26 @@ function moveDown (block,distance){
 // 2 at target phase
 // 3 bubbling phase
 
-// event.stopPropagation() - запретить событию продолжать двигаться по элементам
+// event.stopPropagation() - запретить событию продолжать двигаться по элементам(использовать аккуратно)
 // event.preventDefault() - отмена события по умолчанию
 
+// mobile listeners
+// event.touches - сколько всего пальцев сейчас на экране
+// event.target - сколько всего пальцев сейчас на конркретном элементе
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const box = document.querySelector(".mobileAdapt");
+    box.addEventListener("touchstart", (e) => {
+        e.preventDefault;
+        console.log(`start`)
+    })
+    box.addEventListener("touchmove", (e) => {
+        e.preventDefault;
+        console.log(`move`)
+    })
+    box.addEventListener("touchend", (e) => {
+        e.preventDefault;
+        console.log(`end`)
+    })
+})

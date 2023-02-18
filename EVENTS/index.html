@@ -23,6 +23,19 @@
                 background-color: blue;
                 position: absolute;
             }
+            #mouseBtn{
+                width: 100px;
+                height: 20px;
+                position: absolute;
+                transform: translateX(100%);
+            }
+            .mobileAdapt{
+                height: 100px;
+                width: 100px;
+                background-color: aqua;
+                position: absolute;
+                left: 300px;
+            }
       </style>
 </head>
 <body>
@@ -30,6 +43,10 @@
       <div class="block1"></div>
       <div class="output"></div>
       <div class="moveBlock"></div>
+
+      <button id="mouseBtn">Click me</button>
+
+      <div class="mobileAdapt">Touches</div>
 
   <script src="events.js"></script>
 </body>

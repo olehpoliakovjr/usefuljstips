@@ -2,7 +2,7 @@
 // asynchronous code this is code that runs in parallel, not sequentially
 // организация асинхронного кода делаться с помощью callback & promis
 // promise - представляет значение, которое еще не существует
-// promise - это объект которы йхранит в себе функцию которая выполняеться асинхронно
+// promise - это объект который хранит в себе функцию которая выполняеться асинхронно
 // возможные состояния объекта промис - fulfield,rejected,pending
 // в метод then можно записать функцию, с помощью then можно более удобно настроить цепочку выполнения
 // в аргумент метода then передеться одна или две функции
@@ -43,6 +43,7 @@ document.querySelector(".imgBtn2").addEventListener("click", function(){
 })
 
 // the function is always executed after the function in the promis is executed
+
 
 function promisDownloadImage(url){
     return new Promise (function(resolve,reject){
@@ -90,7 +91,7 @@ function asyncOperation () {
             },randomValue) // time as well as value
         } else {
             setTimeout(function(){
-                reject(new Error(`The ${randomValue} is less than 1000`))
+                reject(new Error(` ${randomValue} is less than 1000`))
             },randomValue)
         }
     })
@@ -99,6 +100,7 @@ function asyncOperation () {
 document.querySelector(".asyncBtn").addEventListener("click", function(){
 
     asyncOperation()
-    .then(randomValue => console.log(randomValue), error => console.log(error.message))
+    .then(randomValue => console.log(randomValue))
+    .catch(error => console.log(error.message))
 
 })
