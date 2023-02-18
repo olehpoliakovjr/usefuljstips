@@ -60,14 +60,30 @@ console.log(`max number in this array is ` + max)
 // firstArray.map() // method creates a new array populated with the results of calling a provided function on every element in the calling array.
 // const map1 = array1.map(x => x * 2)
 
-const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard'];
-
-function sortStudentsByGroups(arr) {
-    
+function countPositivesSumNegatives(input) {
+    let positivNumbers = 0;
+    let negativeAmount = 0;
+        if(input == null || input.length === 0){
+            return []
+        } else {
+            for(let number of input){
+                if(number > 0){
+                    positivNumbers += 1;
+                } else {
+                    negativeAmount += number
+                }
+            }
+        }
+        return [positivNumbers, negativeAmount]
 }
-console.log(sortStudentsByGroups(students))
+countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])
 
-
+function sumStr(a,b) {
+  let result = ''
+  result = Number(a) + Number(b)
+    return result.toString()
+}
+console.log(sumStr("4","5"))
 
 
 
