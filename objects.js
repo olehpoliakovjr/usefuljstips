@@ -113,3 +113,68 @@ salaries[Symbol.iterator] = function () {
 for(let res of salaries){
     console.log(res)
 }
+//------------------------------------------------------------------//
+
+//MAP - it is an object. 
+const shops = [
+    {rice: 500},
+    {bread: 50},
+    {oil: 200}
+]
+const budget = [1000,2000,1500]
+
+const map = new Map([
+    [{paper: 12000}, 3500]
+])
+
+shops.forEach((shop,i) => {
+    map.set(shop, budget[i]); // тут i это каждый элемент массива budget
+})
+
+console.log(map)
+console.log(map.get(shops[0]))
+console.log(map.has(shops[2]))
+
+
+const goods = [] // все товары нашего магазина
+for(let shop of map.keys()) { // возвращаэт итерируэмый объект по ключам
+    goods.push(Object.keys(shop)[0])
+}
+console.log(goods)
+
+let totalValue = 0;
+for(let value of map.values()){
+    totalValue += value
+}
+console.log(totalValue)
+
+
+
+for(let [shop,price] of map.entries()){
+    console.log(shop,price)
+}
+
+//------------------------------------------------------------------//
+
+// Set - особый вид колекция, где каждое значение может повторяться только один раз
+
+const arr = ['Alex','Anna','Oleg','Alex']
+
+const set = new Set(arr)
+
+function unique(arr){               // возвращает обычный массив
+    return Array.from(new Set (arr))
+}
+
+set.add('Ivan')
+set.delete('Anna')
+set.has('Oleg')
+set.size;
+
+set.forEach((value, valueAgain,set) => {
+    console.log(value, valueAgain)
+})
+
+console.log(set)
+console.log(set.keys())
+

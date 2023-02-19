@@ -37,4 +37,10 @@ console.log(Object.getOwnPropertySymbols(obj))
 console.log(obj[Object.getOwnPropertySymbols(obj)[0]])
 
 
-
+//------------------------------------------------------------------//
+//BigInt
+//bigint нельзя использовать с Math
+// нельзя смешивать bigint и обычные числа
+const bigInt = 89819849284018241902840124821491802948124812n;
+console.log(typeof bigInt)
+console.log(5n / 2n) // = 2
