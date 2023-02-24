@@ -142,3 +142,5 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log(`end`)
     })
 })
+
+    // box.classList.contains() проверка есть ли такой класс

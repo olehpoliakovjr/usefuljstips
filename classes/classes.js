@@ -1,4 +1,4 @@
-// class - it is a template for the object creating
+// class - it is a template for the object creating (es6)
 // class can include data and methods, which are supposed to process this data
 // objects that are created using classes are called instances
 // если метод указывать внутри конструктора, он добавляеться в объект, в если нет, то в прототип
@@ -7,7 +7,7 @@
 // classes maintain getters, setters, close and open fields
 class Rect {
     // constructor is a method that will be run immediately after the object is created
-    constructor(width,height) {
+    constructor(width,height) { // тут мы пишем аргументы которые будут приходить из вне
         this._width = width;
         this._height = height;
     }

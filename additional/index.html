@@ -9,6 +9,57 @@
         .box{
             background-color: red;
         }
+        .timer{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            margin: 0 auto;
+        }
+        .time{
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px 0.5px;
+            margin: 0 5px;
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .shop-block{
+            height: 400px;
+            width: 100%;
+            border: 1px solid red;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .item{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            margin-top: 50px;
+            height: 300px;
+            width: 200px;
+            border: 1px solid black;
+        }
+        .itemImage{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            
+        }
+        .description{
+            width: 200px;
+            height: 150px;
+        }
+        .price{
+            height: 20px;
+            width: 80px;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -17,7 +68,18 @@
     <div class="element"></div>
     <div class="element"></div>
     <div class="element"></div>
+
+    <div class="timer">
+        <div class="days time"></div>
+        <div class="hours time"></div>
+        <div class="minutes time"></div>
+        <div class="seconds time"></div>
+    </div>
     
+
+     <div class="shop-block">
+
+     </div>
     <script src="script.js"></script>
 </body>
 </html>
